@@ -52,7 +52,7 @@ def train_one_model(optimizer_name, learning_rate, l2_weight_decay, gen_num, ind
     flag = 0
     count = 0
 
-    valid_epoch = 2
+    valid_epoch = 80
     metrics_name = ['flops', 'param', 'accuracy', 'recall', 'specificity', 'precision', 'f1_score', 'auroc', 'iou']
     metrics = {}
     for metric_name in metrics_name:
