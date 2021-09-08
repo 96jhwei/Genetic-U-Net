@@ -143,8 +143,8 @@ def evolve():
                         xor_result = []
                         for p in range(gene_len):
                             xor_result.append(int(new_parents_list[0][p]) ^ int(new_parents_list[1][p]))
-                        sim = sum(xor_result) / gene_len
-                        if sim > 0.2:
+                        diff = sum(xor_result) / gene_len
+                        if diff > 0.2:
                             break
                     off1, off2 = cxMultiPoint(new_parents_list[0], new_parents_list[1])
                 else:
