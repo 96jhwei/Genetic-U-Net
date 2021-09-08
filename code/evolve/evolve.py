@@ -36,11 +36,11 @@ def evolve():
     crossover_rate = 0.9
     mutation_rate = 0.7
     flipping_rate = 0.05
-    gens = 60
-    epochs = 3
+    gens = 50
+    epochs = 130
     batch_size = 1
-    parents_num = 2
-    offsprings_num = 2
+    parents_num = 20
+    offsprings_num = 20
     devices = [torch.device(type='cuda', index=i) for i in range(gpu_num)]
     optimizer_name = 'Lookahead(Adam)'
     learning_rate = 0.001
@@ -90,7 +90,6 @@ def evolve():
         if not os.path.exists(os.path.join(os.path.abspath('.'), 'exps/{}/pickle/'.format(exp_name))):
             os.mkdir(os.path.join(os.path.abspath('.'), 'exps/{}/pickle/'.format(exp_name)))
         offspring = None
-        sum_writer = SummaryWriter(log_dir=os.path.join(os.path.abspath('.'), 'exps/{}/runs'.format(exp_name)))
 
     else:
         population = toolbox.population(n=parents_num)
