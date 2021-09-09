@@ -31,7 +31,7 @@ def evolve():
     channel = 20
     en_node_num = 5
     de_node_num = 5
-    sample_num = 4
+    sample_num = 3
     exp_name = 'test'
     crossover_rate = 0.9
     mutation_rate = 0.7
