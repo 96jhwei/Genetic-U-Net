@@ -55,11 +55,11 @@ def evolve():
     en_node_num_list = [en_node_num for _ in range(sample_num + 1)]
     de_node_num_list = [de_node_num for _ in range((sample_num))]
 
-    func_type = ['conv_bn_relu_3', 'conv_bn_mish_3', 'conv_in_relu_3',
-                 'conv_in_mish_3', 'p_conv_bn_relu_3', 'p_conv_bn_mish_3',
-                 'p_conv_in_relu_3', 'p_conv_in_mish_3', 'conv_bn_relu_5',
-                 'conv_bn_mish_5', 'conv_in_relu_5','conv_in_mish_5', 'p_conv_bn_relu_5',
-                 'p_conv_bn_mish_5','p_conv_in_relu_5', 'p_conv_in_mish_5']
+    func_type = ['conv_relu_3', 'conv_mish_3', 'conv_in_relu_3',
+                 'conv_in_mish_3', 'p_conv_relu_3', 'p_conv_mish_3',
+                 'p_conv_in_relu_3', 'p_conv_in_mish_3', 'conv_relu_5',
+                 'conv_mish_5', 'conv_in_relu_5','conv_in_mish_5', 'p_conv_relu_5',
+                 'p_conv_mish_5','p_conv_in_relu_5', 'p_conv_in_mish_5']
 
     gene_len = get_gene_len(de_func_type=func_type, en_func_type=func_type, de_node_num_list=de_node_num_list,
                             en_node_num_list=en_node_num_list, only_en=False)
